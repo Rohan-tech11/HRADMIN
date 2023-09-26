@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+     <script src="js/register.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>User Registration</h2>
+</div>
+<form class="form" id="form" th:action="@{/users/addNew}" method="post">
+    <div class="form-control">
+      <label>First Name</label>
+        <input type="text"  id="FirstName" placeholder="Enter Your firstname" autocomplete="off" name="firstname" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+        </div>
+        <div class="form-control">
+          <label>Last Name</label>
+        <input type="text"  id="LastName" placeholder="Enter Your LastName" autocomplete="off" name="lastname" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+        </div>
+        <div class="form-control">
+        <label>User Name</label>
+        <input type="text"  id="username" placeholder="username" autocomplete="off" name="username" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+         <div style="text-align:center; font-size:20px; color:green; font-weight:bold">  
+    <span th:utext="${usermessage}"></span> 
+    </div>
+        <small>Error Msg</small>
+    </div>
+    <div class="form-control">
+        <label>Email Id</label>
+        <input type="Email" name="emailid" id="email" placeholder="Enter Your Email" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <div style="text-align:center; font-size:20px; color:green; font-weight:bold">  
+    <span th:utext="${message}"></span> 
+    </div>
+        <small>Error Msg</small>
+    </div>
+    <div class="form-control">
+        <label>Phone Number</label>
+        <input type="number" name="phonenumber" id="phone" placeholder="Enter Your Phone Number" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+    </div>
+    
+     <div class="form-control">
+        <label>Years Of Experience</label>
+        <input type="text" name="experience" id="Experience" placeholder="Years Of Experience" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+    </div>
+    
+    <div class="form-control">
+        <label>Skills</label>
+        <input type="text" name="skills" id="skills" placeholder="Primary Skills" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+    </div>
+    
+    
+    
+    <div class="form-control">
+        <label>Password</label>
+        <input type="Password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+    </div>
+    <div class="form-control">
+        <label>Confirm Password</label>
+        <input type="Password"  id="cpassword" placeholder="Enter Your Password" autocomplete="off" required>
+        <i class="fa-solid fa-circle-check"></i>
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <small>Error Msg</small>
+    </div>
+    <button type="submit" value="Submit" class="btn" name="">Register</button>
+    <a  th:href="@{/login}">Login Page</a>
+</form>
+</div>
+
+
+ <script src="js/register.js"></script>
+
+ 
+
+<body>
+
+ 
+
+</html>
